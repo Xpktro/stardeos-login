@@ -40,7 +40,9 @@ const Results: NextPage = ({ users }: any) => (
 )
 
 Results.getInitialProps = async (_: any) => {
-  const res = await fetch('http://localhost:3000/api/users')
+  const res = await fetch(
+    `${process.env.PUBLIC_URL || 'http://localhost:3000'}/api/users`
+  )
   const users = await res.json()
   return { users }
 }
