@@ -15,7 +15,14 @@ const Results: NextPage = ({ users }: any) => (
     <tbody>
       {users.map(
         (
-          { fullName, username, email, birthday, password, termsAgreed },
+          {
+            fullName,
+            username,
+            email,
+            birthday,
+            password,
+            termsAgreed,
+          }: { [key: string]: string },
           key: number
         ) => (
           <tr key={key}>
