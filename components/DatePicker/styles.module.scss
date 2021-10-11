@@ -1,0 +1,23 @@
+@use '/styles/theme' as t;
+
+.picker {
+  width: 100%;
+}
+
+.calendar {
+  border: 1px solid t.$disabled;
+  box-shadow: t.$shadow;
+
+  :global(.react-datepicker__navigation) {
+    span::before {
+      border-color: t.$background;
+    }
+  }
+
+  :global(.react-datepicker__month-container) {
+    :global(.react-datepicker__header) {
+      background-image: t.$primary;
+      filter: contrast(95%);
+    }
+  }
+}

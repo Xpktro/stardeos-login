@@ -1,0 +1,67 @@
+@use '/styles/theme' as t;
+
+.logo {
+  width: 180px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 450px;
+    background-color: t.$background;
+    border-radius: 8px;
+    box-shadow: t.$shadow;
+    padding: 45px 50px 30px;
+
+    .checkboxInput {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      height: 45px;
+      border-radius: 4px;
+      border: 1px solid t.$disabled;
+      padding: 0px 10px;
+      font-size: 14px;
+
+      &[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    > span {
+      // FIXME: Hackiest way to inline messages
+      color: t.$error;
+      font-size: 11px;
+
+      height: 0;
+      margin-top: -20px;
+    }
+
+    button[type='submit'] {
+      height: 45px;
+      border: none;
+      border-radius: 4px;
+      background-image: t.$primary;
+      box-shadow: t.$shadow;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 20px;
+      cursor: pointer;
+      text-transform: uppercase;
+      text-shadow: t.$shadow-text;
+      color: t.$background;
+    }
+  }
+}
